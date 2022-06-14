@@ -70,7 +70,18 @@ header .lista a:hover{
         "ingredientesMain";
     grid-area: main;
     background-color: antiquewhite;
-  }
+    animation: mainAparece 1s;
+}
+
+
+@keyframes mainAparece {
+    from {
+        transform: translateY(-1000px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
   
 .tituloMain { 
     grid-area: tituloMain;
@@ -113,6 +124,7 @@ header .lista a:hover{
     justify-content: space-evenly;
     align-items: center;
     padding: 10px;
+    animation: mainAparece 1s;
 }
 
 /*NovedadesMain*/
@@ -125,6 +137,7 @@ header .lista a:hover{
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    animation: mainAparece 1s;
 }
 
 /*MaisInfoMain*/
@@ -137,12 +150,14 @@ header .lista a:hover{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    animation: mainAparece 1s;
 }
 
 /*ContactoMain*/
 
 .mainContacto {
     background-color: antiquewhite;
+    animation: mainAparece 1s;
 }
 
 .formulario {
