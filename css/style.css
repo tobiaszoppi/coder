@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grilla {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+}
+  
+.header {  
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+header .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+  
+header .lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header .lista li {
+    margin: 10px;
+}
+
+header .lista a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+header .lista a:hover{
+    font-weight: 900;
+    color: white;
+    background-color: black;
+}
+
+/*IndexMain*/
+.main {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "tituloMain"
+        "tablaMain"
+        "ingredientesMain";
+    grid-area: main;
+    background-color: antiquewhite;
+  }
+  
+.tituloMain { 
+    grid-area: tituloMain;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+  
+.tablaMain {
+    display: flex;
+    grid-area: tablaMain;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+  
+.ingredientesMain {
+    display: flex;
+    grid-area: ingredientesMain / ingredientesMain / ingredientesMain / ingredientesMain;
+    flex-flow: column wrap;
+    place-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/*NosotrosMain*/
+.nosotrosMain {
+    display: flex;
+    background-color: antiquewhite;
+    grid-area: main;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+/*NovedadesMain*/
+.mainNovedades {
+    display: flex;
+    background-color: antiquewhite;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*MaisInfoMain*/
+.mainMasInfo {
+    display: flex;
+    background-color: antiquewhite;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*ContactoMain*/
+
+.mainContacto {
+    background-color: antiquewhite;
+}
+
+.formulario {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Footer*/
+
+.footer {
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+footer .lista li {
+    margin: 10px;
+}
+
+footer .lista a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer .lista a:hover {
+    font-weight: 900;
+    color: white;
+    background-color: black;
+}
+  
+html, body , .grilla {
+    height: 100%;
+}
+
+/*RESPONSIVE DESING - MEDIA QUERY - MOBILE LAST*/
+/*MOBILE LAST = MAX-WIDTH*/
+@media (max-width: 768px) {
+    .grilla{
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+    .header{
+        flex-direction: row;
+    }
+    .header ul{
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+
+    }
+    
+    .footer {
+        flex-direction: row;
+    }
+    .footer ul {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+    
+}
+
+/*DISPOSITIVO CHICOS // SM */
+
+@media (max-width:375px) {
+    .header{
+        flex-direction: column;
+    }
+    .header li {
+        padding: 5px;
+    }
+    /*
+    .footer {
+        flex-direction: column;
+    }
+    .footer li {
+        padding: 5px;
+    }
+    */
+}
